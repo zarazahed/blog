@@ -1,6 +1,7 @@
-from django.url import path
+from django.urls import path
 from pages import views
 
-url patterns = [
-    path("", )
+urlpatterns = [
+    path("", views.home, name="home"),
+    path("<int:pk>", views.detail, name="detail")
 ]
